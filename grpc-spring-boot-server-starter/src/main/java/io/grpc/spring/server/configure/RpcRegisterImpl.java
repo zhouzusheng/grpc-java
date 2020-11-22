@@ -10,8 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
+import java.net.InetAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.UnknownHostException;
 import java.util.*;
 
 public class RpcRegisterImpl implements RpcRegister {
@@ -46,7 +48,17 @@ public class RpcRegisterImpl implements RpcRegister {
         ConsulClient agentClient = new ConsulClient(consulHost, consulPort);
         String serviceName = serviceInfo.getType();
 
-        String serviceId = properties.getLocalIp() + ":" + properties.getPort() + "/" + serviceName;
+        String localIp = properties.getLocalIp();
+        if(localIp == null || localIp.isEmpty()) {
+            InetAddress addr = null;
+            try {
+                addr = InetAddress.getLocalHost();
+                localIp = addr.getHostAddress();
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+            }
+        }
+        String serviceId = localIp + ":" + properties.getPort() + "/" + serviceName;
         if(!StringUtils.isEmpty(serviceInfo.getName())){
             serviceId += "/" + serviceInfo.getName();
         } else {

@@ -14,7 +14,7 @@ It is the reason of this project.
 Due to oracle java, there are many problem.
 
 ## integrate consul
-## integrate sprinboot
+## integrate springboot
 ## make an example
 
 
