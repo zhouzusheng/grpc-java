@@ -98,10 +98,6 @@ public class RpcRegisterImpl implements RpcRegister {
         agentClient.agentServiceRegister(newService);
         logger.info("grpc service register to consul:{}", serviceInfo);
 
-        Response<Map<String, Service>> res = agentClient.getAgentServices();
-        Map<String, Service> resValue = res.getValue();
-        System.out.println(resValue);
-
     }
 
     @Override
