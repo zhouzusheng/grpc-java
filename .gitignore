@@ -1,0 +1,21 @@
+# Project exclude paths
+/grpc-annotation-helper/target/
+/grpc-api/target/
+/grpc-consul-api/target/
+/grpc-consul-transport/target/
+/grpc-context/target/
+/grpc-core/target/
+/grpc-netty/target/
+/grpc-netty-httpclient/target/
+/grpc-protobuf/target/
+/grpc-protobuf-lite/target/
+/grpc-rls/target/
+/grpc-services/target/
+/grpc-spring-boot-client-example/target/
+/grpc-spring-boot-client-starter/target/
+/grpc-spring-boot-example-facade/target/
+/grpc-spring-boot-server-example/target/
+/grpc-spring-boot-server-starter/target/
+/grpc-stub/target/
+/perfmark-api/target/
+/proto-google-common-protos/target/

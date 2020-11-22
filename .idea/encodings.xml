@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/grpc-annotation-helper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-annotation-helper/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-consul-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-consul-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-consul-transport/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-consul-transport/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-context/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-context/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-netty-httpclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-netty-httpclient/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-netty/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-protobuf-lite/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-protobuf-lite/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-protobuf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-protobuf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-rls/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-rls/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-services/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-services/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-client-example/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-client-example/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-client-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-client-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-example-facade/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-example-facade/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-server-example/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-server-example/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-server-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-spring-boot-server-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-stub/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grpc-stub/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/perfmark-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/perfmark-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proto-google-common-protos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proto-google-common-protos/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

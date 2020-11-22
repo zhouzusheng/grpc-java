@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: poi-query-service
+
+grpc:
+  server:
+    localIp: 127.0.0.1
+    port: 9090
+    consulHost: http://127.0.0.1:8500

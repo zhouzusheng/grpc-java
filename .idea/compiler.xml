@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="grpc-protobuf" />
+        <module name="grpc-spring-boot-server-starter" />
+        <module name="grpc-spring-boot-client-starter" />
+        <module name="grpc-spring-boot-server-example" />
+        <module name="grpc-spring-boot-example-facade" />
+        <module name="perfmark-api" />
+        <module name="grpc-services" />
+        <module name="grpc-netty" />
+        <module name="grpc-consul-transport" />
+        <module name="grpc-api" />
+        <module name="grpc-rls" />
+        <module name="grpc-core" />
+        <module name="grpc-netty-httpclient" />
+        <module name="grpc-protobuf-lite" />
+        <module name="grpc-annotation-helper" />
+        <module name="grpc-consul-api" />
+        <module name="grpc-stub" />
+        <module name="grpc-context" />
+        <module name="grpc-spring-boot-client-example" />
+        <module name="proto-google-common-protos" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="grpc-spring-client-boot-starter" target="11" />
+      <module name="grpc-spring-common-boot" target="11" />
+      <module name="grpc-spring-server-boot-starter" target="11" />
+      <module name="protobuf-lite" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

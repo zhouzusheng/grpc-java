@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+package io.grpc.poi.rpc.query;
+
+message PoiItem {
+  string name = 1;
+  string type = 2;
+}
+
+message PoiResult {
+  repeated PoiItem items = 1;
+}
+
+message QueryExpress {
+  string text = 1;
+}
+
+
+service PoiQueryService {
+  rpc query (QueryExpress) returns (PoiResult);
+}
