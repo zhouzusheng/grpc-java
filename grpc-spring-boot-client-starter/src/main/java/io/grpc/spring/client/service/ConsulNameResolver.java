@@ -8,6 +8,7 @@ import com.google.common.net.HostAndPort;
 import io.grpc.Attributes;
 import io.grpc.EquivalentAddressGroup;
 import io.grpc.NameResolver;
+import org.asynchttpclient.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +27,7 @@ public class ConsulNameResolver extends NameResolver {
     private final ConsulClient client;
 
     private final URI targetUri;
+    private final Map<String, String> targetParams;
     private Timer timer;
 ;
 
@@ -39,6 +41,21 @@ public class ConsulNameResolver extends NameResolver {
     public ConsulNameResolver(URI targetUri, Optional<HostAndPort> maybeConsulHostAndPort) {
 
         this.targetUri = targetUri;
+        String query = targetUri.getQuery();
+        if(query != null && !query.isEmpty()) {
+            targetParams = new HashMap<>();
+            for (String queryStringParam : query.split("&")) {
+                int pos = queryStringParam.indexOf('=');
+                if (pos <= 0) {
+                    targetParams.put(queryStringParam, "");
+                } else {
+                    targetParams.put(queryStringParam.substring(0, pos), queryStringParam.substring(pos + 1));
+                }
+            }
+        } else {
+            targetParams = null;
+        }
+
 
         if (maybeConsulHostAndPort.isPresent()) {
             HostAndPort info = maybeConsulHostAndPort.get();
@@ -70,6 +87,9 @@ public class ConsulNameResolver extends NameResolver {
                 String serviceName = getServiceAuthority();
                 HealthServicesRequest.Builder builder = HealthServicesRequest.newBuilder();
                 builder.setPassing(true);
+                if(targetParams != null) {
+                    builder.setTags(targetParams.values().toArray(new String[0]));
+                }
                 List<HealthService> nodes = client.getHealthServices(serviceName, builder.build()).getValue();
                 updateListener(nodes, listener);
             }

@@ -41,8 +41,11 @@ public class GrpcServerRunner extends ApplicationObjectSupport implements Comman
         final ServerBuilder<?> serverBuilder = ServerBuilder.forPort(properties.getPort());
         for (Object grpcService : getApplicationContext().getBeansWithAnnotation(GrpcService.class).values()) {
             GrpcService serviceAnn = AnnotationUtils.findAnnotation(grpcService.getClass(), GrpcService.class);
-            final Class grpcServiceOuterClass = serviceAnn.grpcServiceOuterClass();
-            final String serviceName = serviceAnn.serviceName();
+            Class grpcServiceOuterClass = serviceAnn.grpcServiceOuterClass();
+            if(grpcServiceOuterClass == null || grpcServiceOuterClass == Void.class) {
+                grpcServiceOuterClass = grpcService.getClass().getSuperclass();
+            }
+            String serviceName = serviceAnn.serviceName();
 
             String version = serviceAnn.version();
 

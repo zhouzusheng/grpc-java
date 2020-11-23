@@ -15,7 +15,7 @@ public @interface GrpcService {
      *
      * @return protoc-generated class that creates {@link io.grpc.ServerServiceDefinition} via static <code>bindService</code> function.
      */
-    Class<?> grpcServiceOuterClass();
+    Class<?> grpcServiceOuterClass() default Void.class;
 
     String serviceName();
 

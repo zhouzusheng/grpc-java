@@ -8,7 +8,7 @@ import io.grpc.poi.rpc.query.PoiQueryServiceGrpc;
 import io.grpc.spring.server.service.GrpcService;
 import io.grpc.stub.StreamObserver;
 
-@GrpcService(grpcServiceOuterClass = PoiQueryServiceGrpc.PoiQueryServiceImplBase.class, serviceName = "DemoServer", version = "1.0.0")
+@GrpcService(serviceName = "DemoServer", version = "1.0.0")
 public class PoiQueryServiceImpl extends PoiQueryServiceGrpc.PoiQueryServiceImplBase {
 
     @Override

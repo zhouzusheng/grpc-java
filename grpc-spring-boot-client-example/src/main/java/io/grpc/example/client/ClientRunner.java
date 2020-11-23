@@ -9,7 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 public class ClientRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
-        ManagedChannel channel = ManagedChannelBuilder.forTarget("consul://io.grpc.poi.rpc.query.PoiQueryService")
+        ManagedChannel channel = ManagedChannelBuilder.forTarget("consul://io.grpc.poi.rpc.query.PoiQueryService?name=DemoServer")
                 .usePlaintext()
                 .defaultLoadBalancingPolicy("round_robin").build();
         PoiQueryServiceGrpc.PoiQueryServiceBlockingStub sub = PoiQueryServiceGrpc.newBlockingStub(channel);
