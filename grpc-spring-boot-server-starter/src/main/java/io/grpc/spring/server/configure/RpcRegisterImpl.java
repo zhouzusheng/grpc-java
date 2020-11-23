@@ -74,7 +74,7 @@ public class RpcRegisterImpl implements RpcRegister {
         NewService newService = new NewService();
         newService.setName(serviceName);
         newService.setId(serviceId);
-        newService.setAddress(properties.getLocalIp());
+        newService.setAddress(localIp);
         newService.setPort(properties.getPort());
         List<String> tags = new ArrayList<>();
         Map<String, String> meta = new HashMap<>();
